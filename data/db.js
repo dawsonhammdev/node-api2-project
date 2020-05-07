@@ -58,3 +58,5 @@ function insertComment(comment) {
     .insert(comment)
     .then(ids => ({ id: ids[0] }));
 }
+
+

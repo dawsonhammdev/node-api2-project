@@ -12,4 +12,7 @@ server.get("/", (req, res) => {
 
 server.use("/api/posts", postRouter);
 
-server.listen(2000, () => console.log('API running on port 2000'));
+const port = process.env.PORT || 5000;//this is how we make the port enviorment dynamic!
+server.listen(port, () => {
+  console.log(`\n*** Server Running on http://localhost:${port} ***\n`);
+});
